@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CC and Mods</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="reset2.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<style type="text/css"> 
+		body { 	
+			background-color: #95baca;
+            color: black;
+            font-family: Poiret One;
+				/*---------------------Navigation--------------------*/
+			} 
+			nav{
+				font-family: Poiret One;
+				font-weight: bold;
+				color: white;
+				margin: 30px auto;
+				width: 100%;
+				height: 50px;
+				display: flex; /*set as a flex container*/
+				flex-direction: column; /*mobile first approach*/
+				align-items:stretch;
+				border-radius: 25px;
+				list-style-type: none; /*Remove Bullets*/
+				padding: 0;
+
+			}
+			a{
+				text-decoration: none; /*removes bullets*/
+				color:white;
+				text-shadow: 5px 2px 4px #91c823;
+				flex:1;		/*equal width to links*/
+				height: 25px;
+				font-family: Poiret One;
+				padding:20px;
+				text-align: center;
+				align-items:stretch;
+				font-size: 40px;
+				border-bottom:1px solid white;
+				background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, 
+				rgba(255, 255, 255, 0.2) 25%, 
+				rgba(255, 255, 255, 0.2) 75%, 
+				rgba(255, 255, 255, 0) 100%);
+			}
+			.active{
+				color: black;
+				text-shadow: 5px 2px 4px #91c823;
+			}
+			#logoNav{
+				font-size: 40px;
+				font-weight: bold;
+				}
+						/* Dropdown */
+			}
+			.dropdown_text{
+				overflow: scroll;
+				font-size: 15pt;
+			}
+			#cc_image1{
+				float: right;
+				margin-left: 0 25px 25px 25px;
+				width: 500px;
+			}
+			.dropdown-title{
+				font-family: Poiret One;
+				font-weight: bold;
+				font-size: 30pt; 
+				color: white;
+				text-shadow: rgb(48,191,63) -1px -2px 0.5em;
+				border-bottom:1px solid white;
+				background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, 
+				rgba(255, 255, 255, 0.2) 25%, 
+				rgba(255, 255, 255, 0.2) 75%, 
+				rgba(255, 255, 255, 0) 100%);
+			}
+			.header{
+				padding: 5%;			}
+			.container{
+				padding: 0;
+				width: 80%;
+			}
+			.collapse {
+			    display: none;
+			}
+
+			.collapse.in {
+			   display: block;
+			}
+			.collapse {
+			    display: none;
+			}
+
+			.panel-body{
+				color: white;
+				background: cornflowerblue; /* For browsers that do not support gradients */
+			    background: -webkit-linear-gradient (bottom,#93c923,#52a2df); /* For Safari 5.1 to 6.0 */
+			    background: -o-linear-gradient (bottom,#93c923,#52a2df); /* For Opera 11.1 to 12.0 */
+			    background: -moz-linear-gradient (bottom,#93c923,#52a2df); /* For Firefox 3.6 to 15 */
+			    background: linear-gradient (bottom,#93c923,#52a2df); /* Standard syntax */
+			    border: none;
+			}
+			.panel-heading{
+				background-color: #7ec229;
+			}
+			.CClink{
+				font-size: 20px;
+			}
+			.CCtitle{
+				font-size: 25px
+			}
+
+
+		/* ------------------Desktop------------------------*/
+		@media screen and (min-width: 700px){
+								/* Navigation */
+			nav{
+				width: 90%;
+				flex-flow: row;/* across screen for dexktop screen size*/
+				align-items:baseline;
+			}
+			a{
+				font-size: 25px;
+				border:none;
+			}
+				.active{
+				color: black;
+				text-shadow: 5px 2px 4px #91c823;
+			}
+			#logoNav{
+				flex:6;
+				text-align: left;
+			}
+
+   		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<a id="logoNav" href="Home.html">Sims4Pal</a>
+			<a href="Home.html">Home</a>
+		    <a href="Cheat-Codes.html">Cheat Codes</a>
+		    <a class="active" href="CCandmods.html">CC and Mods</a>
+		    <a href="Tipsandtricks.html">Tips and Tricks</a>
+		    <a href="Contact.html">Contact Us</a>
+		</nav> 
+	</header>  
+
+	<aside></aside>
+    <section>
+		<article>    
+			<div class="header">
+				<p></p>
+			</div>
+			<div class='container'> 
+        <!--add panel and assign  it the id of accordian to link panels together  -->
+          <div class="panel-group" id="accordion">
+          	<h1 class="dropdown-title">My Top 10 Custom Content Picks</h1>
+          	<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="e.g.Documents/Electronic Arts/The Sims 4/Mods">Move package files directly to your Mods folder.</button>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. Mutske's SF Modular Windows</a>
+                    </h4>
+                </div>
+                <!--set first panel to open position with class in-->
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="SFWindows.png">These are great for creating seamless, large windows.<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/sf-modular-windowset/id/1290217/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. Mutske's Nebo Windows</a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image2" src="mutske_window2.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/nebo-windows/id/1328950/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4.</a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">5.</a>
+                    </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">6.</a>
+                    </h4>
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+      
+
+		    <div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                         <!--link panel heading to panel body via  href and add toggle effect-->
+		                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">7.</a>
+		                    </h4>
+		                </div>
+		                <div id="collapseSeven" class="panel-collapse collapse">
+		            <div class="panel-body">
+		                <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+		            </div>
+		        </div>
+		    </div>
+		     
+      <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">8.</a>
+                    </h4>
+                </div>
+                <div id="collapseEight" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+     
+      <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">9.</a>
+                    </h4>
+                </div>
+                <div id="collapseNine" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+     
+      <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                         <!--link panel heading to panel body via  href and add toggle effect-->
+                        <a class="CCtitle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">10.</a>
+                    </h4>
+                </div>
+                <div id="collapseTen" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p class="dropdown_text"><img id="cc_image1" src="mutske_window.png">Info and link to download. Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to downloadInfo and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download.Info and link to download<a class="CClink" href="https://www.thesimsresource.com/downloads/details/category/sims4-sets/title/skylights/id/1344244/" target="_blank">Find them here!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></article>
+    
+	</section>
+	<footer></footer>
+        <!--bootstrap js files here-->
+        <script src='http://code.jquery.com/jquery.min.js'></script>
+        <script src='bootstrap/js/bootstrap.min.js'></script>
+        <script src='js/script.js'></script>
+</body>
+</html>

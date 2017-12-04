@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<title>Tips and Tricks</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="reset2.css">
+        <style type="text/css"> 
+       body {   
+            background-color: #95baca;
+            color: black;
+            font-family: Poiret One;
+                /*---------------------Navigation--------------------*/
+            } 
+            nav{
+                font-family: Poiret One;
+                font-weight: bold;
+                color: white;
+                margin: 30px auto;
+                width: 100%;
+                height: 50px;
+                display: flex; /*set as a flex container*/
+                flex-direction: column; /*mobile first approach*/
+                align-items:stretch;
+                border-radius: 25px;
+                list-style-type: none; /*Remove Bullets*/
+                padding: 0;
+
+            }
+            a{
+                text-decoration: none; /*removes bullets*/
+                color:white;
+                text-shadow: 5px 2px 4px #91c823;
+                flex:1;     /*equal width to links*/
+                height: 25px;
+                font-family: Poiret One;
+                padding:20px;
+                text-align: center;
+                align-items:stretch;
+                font-size: 40px;
+                border-bottom:1px solid white;
+                background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                rgba(255, 255, 255, 0.2) 75%, 
+                rgba(255, 255, 255, 0) 100%);
+            }
+            .active{
+                color: black;
+                text-shadow: 5px 2px 4px #91c823;
+            }
+            #logoNav{
+                font-size: 40px;
+                font-weight: bold;
+                }
+
+        /* ------------------Desktop------------------------*/
+        @media screen and (min-width: 700px){
+                                /* Navigation */
+            nav{
+                width: 90%;
+                flex-flow: row;/* across screen for dexktop screen size*/
+                align-items:baseline;
+            }
+            a{
+                font-size: 25px;
+                border:none;
+            }
+            .active{
+                color: black;
+                text-shadow: 5px 2px 4px #91c823;
+            }
+            #logoNav{
+                flex:6;
+                text-align: left;
+            }
+                        /* Landing */
+            #landing{
+                flex-direction:row;/* across screen for dexktop screen size*/
+                width:80%;
+                margin: 100px auto;
+            }
+            }
+
+        table {/*applies style to entire table */
+            text-align: center;
+            padding: 5px; 
+            color: black;  
+            font-size: 15px;
+            width: 100%;
+            background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                rgba(255, 255, 255, 0.2) 75%, 
+                rgba(255, 255, 255, 0) 100%);
+        }
+         
+        td {/*applies style to inner cells*/
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+         
+        th {
+            background-color: #91c823;/*applies background colour to table headers*/
+            font-size: 20px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                rgba(255, 255, 255, 0.2) 75%, 
+                rgba(255, 255, 255, 0) 100%);
+        }
+        tr:nth-child(2n+1) {      
+            background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                rgba(255, 255, 255, 0.2) 75%, 
+                rgba(255, 255, 255, 0) 100%); 
+        }
+        tr:nth-child(1n+1) {      
+           background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                rgba(255, 255, 255, 0.2) 75%, 
+                rgba(255, 255, 255, 0) 100%); 
+        }
+        .table_heading{
+            color: #95baca;
+            text-shadow: 5px 2px 4px white;
+            background-color: #d7d7d7;
+        }
+        .vertical_heading {
+            text-shadow: 5px 2px 4px white;
+        }
+
+        .dropdown_text{
+        	font-size: 15pt;
+        }
+        }
+        #cc_image1{
+        	float: right;
+        	margin-left: 0 25px 25px 25px;
+        	width: 500px;
+        }
+        .dropdown-title{
+        	font-size: 30pt; 
+            color:white;
+            text-shadow: 5px 2px 4px #91c823;
+        }
+        .container{
+            width: 80%;
+            height: auto;
+        }
+        .collapse {
+            display: none;
+        }
+
+        .collapse.in {
+           display: block;
+        }
+        .collapse {
+            display: none;
+        }
+        .dropdown-title {
+
+        }
+        .panel-heading{
+            font-weight: bolder;
+        }
+        .panel-body{
+           background-color: #91c823;
+           overflow: scroll;
+           max-height: 600px;
+        
+        }
+        </style>
+    </head>
+    <body> 
+        <header> 
+            <nav>
+                <a id="logoNav" href="Home.html">Sims4Pal</a>
+                <a href="Home.html">Home</a>
+                <a href="Cheat-Codes.html">Cheat Codes</a>
+                <a href="CCandmods.html">CC and Mods</a>
+                <a class="active" href="Tipsandtricks.html">Tips and Tricks</a>
+                <a href="Contact.html">Contact Us</a>
+            </nav> 
+        </header>
+        <div class='container'> 
+            <!--add panel and assign  it the id of accordian to link panels together  -->
+              <div class="panel-group" id="accordion">
+              	<h1 class="dropdown-title">Collections</h1>
+                  <div class="panel panel-default">
+
+                    <!--Table Start-->
+                    
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. Aliens 10</a>
+                        </h4>
+                      </div>
+                    <!--set first panel to open position with class in-->
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                         <div class="panel-body">
+                             <table>
+                                 <tr>
+                                      <th class="vertical_heading"></th>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                 </tr>
+                             </table>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--Table Start-->
+
+                <div class="panel panel-default">              
+
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. Crystals - 20</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                              <div class="panel-body">
+                             <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+
+                    <!--Table Start-->
+
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Elements - 15</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                              <div class="panel-body">
+                            <div>
+                               <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+
+                    <!--Table Start-->
+
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4. Fish - 22</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                              <div class="panel-body">                            
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">5. Fossils - 15</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                              <div class="panel-body">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+
+                    <!--Table Start-->
+
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">6. Frogs - 22</a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+          
+
+    		    <div class="panel panel-default">
+	                <div class="panel-heading">
+	                    <h4 class="panel-title">
+    		                         <!--link panel heading to panel body via  href and add toggle effect-->
+	                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">7. Gardening - 32</a>
+	                    </h4>
+	                </div>
+	                <div id="collapseSeven" class="panel-collapse collapse">
+                        <div>       </div>
+                        <div class="panel-body">
+    		                  <table id="ColTable">
+                                <tbody>
+                                    <tr class="table_heading">
+                                        <th>Name</th>
+                                        <th>Growth</th>
+                                        <th>Cost</th>
+                                        <th>Rarity</th>
+                                        <th>Where to find</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Apple</th>
+                                        <td>36h</td>
+                                        <td>§13</td>
+                                        <td>Common</td>
+                                        <td>Seed Packet</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Basil</th>
+                                        <td>24h</td>
+                                        <td>§3</td>
+                                        <td>Common</td>
+                                        <td>Seed Packet</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Bird of Paradise</th>
+                                        <td>36h</td>
+                                        <td>§10</td>
+                                        <td>Rare</td>
+                                        <td>Graft Tulip with Chrysanthemum</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Blackberry</th>
+                                        <td>96h</td>
+                                        <td>§55</td>
+                                        <td>Rare</td>
+                                        <td>Oasis Springs - Big Park</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Blue Bells</th>
+                                        <td>36h</td>
+                                        <td>§11</td>
+                                        <td>Common</td>
+                                        <td>Seed Packet</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Bonsai Buds</th>
+                                        <td>24h</td>
+                                        <td>§10</td>
+                                        <td>Rare</td>
+                                        <td>Graft Daisy and Strawberry or Grapes and Roses.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Carrot</th>
+                                        <td>24h</td>
+                                        <td>§8</td>
+                                        <td>Common</td>
+                                        <td>Seed Packet</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Chamomile</th>
+                                        <td>24h</td>
+                                        <td>§14</td>
+                                        <td>Common</td>
+                                        <td>Granite Falls National Park.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Cherry</th>
+                                        <td>60h</td>
+                                        <td>§15</td>
+                                        <td>Uncommon</td>
+                                        <td>Oasis Springs</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Chrysanthemum</th>
+                                        <td>36h</td>
+                                        <td>§11</td>
+                                        <td>Common</td>
+                                        <td>Seed Packet</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Cow Berry</th>
+                                        <td>24h</td>
+                                        <td>0</td>
+                                        <td>Rare</td>
+                                        <td>Graft Dragonfruit with Snapdragon / Found while Fishing in Oasis Springs and Sylvan Glade </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Daisy</th>
+                                        <td>24h</td>
+                                        <td>§3</td>
+                                        <td>Common</td>
+                                        <td>Seed Packet</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Death Flower</th>
+                                        <td>48h</td>
+                                        <td>§1</td>
+                                        <td>Rare</td>
+                                        <td>Graft Orchid with Pomegranate.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">DragonFruit</th>
+                                        <td>96h</td>
+                                        <td>§80</td>
+                                        <td>Rare</td>
+                                        <td>Graft Strawberry with Snapdragon.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Elderberry</th>
+                                        <td>18h</td>
+                                        <td>§6</td>
+                                        <td>Common</td>
+                                        <td>Found in Granite Falls National Park.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">False Morel Mushroom</th>
+                                        <td>24h</td>
+                                        <td>§19</td>
+                                        <td>Rare</td>
+                                        <td>Granite Falls National Park.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading">Fang Flower</th>
+                                        <td>120h</td>
+                                        <td>§50</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td>§</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>  
+    		            </div>
+    		        </div>
+    		    </div>
+    		     
+
+            <!--Table Start-->
+
+          <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">8. Metals - 20</a>
+                        </h4>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+         
+
+
+            <!--Table Start-->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">9. Microscope Prints - 12</a>
+                        </h4>
+                    </div>
+                    <div id="collapseNine" class="panel-collapse collapse">
+                        <div class="panel-body">
+                                  <div class="panel-body">
+                              <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+         
+                      <!--Table Start-->
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">10. MySims Trophies - 20 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTen" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div id="collapseTen" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                              <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                           
+                        
+                    </div>
+                </div>
+            </div>
+                                    <!--Table Start-->
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">11. Postcards - 14 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseEleven" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div id="collapseEleven" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                              <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <th class="vertical_heading"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                            <!--Table Start-->
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">12. Space Prints - 15 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwelve" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div id="collapseTwelve" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                              <table id="ColTable">
+                                <tbody>
+                                    <tr class="table_heading">
+                                        <th>Name</th>
+                                        <th>Growth</th>
+                                        <th>Cost</th>
+                                        <th>Rarity</th>
+                                        <th>Where to find</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                                         <!--Table Start-->
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">13. Space Rocks - 4 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThirteen" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div id="collapseTwelve" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                              <table id="ColTable">
+                                <tbody>
+                                    <tr class="table_heading">
+                                        <th>Name</th>
+                                        <th>Growth</th>
+                                        <th>Cost</th>
+                                        <th>Rarity</th>
+                                        <th>Where to find</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                                                     <!--Table Start-->
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                             <!--link panel heading to panel body via  href and add toggle effect-->
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">14. Decorative Eggs 10 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFourteen" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div id="collapseTwelve" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                              <table id="ColTable">
+                                <tbody>
+                                    <tr class="table_heading">
+                                        <th>Name</th>
+                                        <th>Growth</th>
+                                        <th>Cost</th>
+                                        <th>Rarity</th>
+                                        <th>Where to find</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--bootstrap js files here-->
+        <script src='http://code.jquery.com/jquery.min.js'></script>
+        <script src='bootstrap/js/bootstrap.min.js'></script>
+        <script type="text/javascript" src="js/script2.js"></script>
+    </body>
+</html>

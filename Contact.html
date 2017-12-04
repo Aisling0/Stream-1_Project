@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="reset2.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">	
+	<style type="text/css"> 
+			body { 	
+				background-color: #95baca;
+	            color: black;
+	            font-family: Poiret One;
+				/*---------------------Navigation--------------------*/
+			} 
+			nav{
+				font-family: Poiret One;
+				font-weight: bold;
+				color: white;
+				margin: 30px auto;
+				width: 100%;
+				height: 50px;
+				display: flex; /*set as a flex container*/
+				flex-direction: column; /*mobile first approach*/
+				align-items:stretch;
+				border-radius: 25px;
+				list-style-type: none; /*Remove Bullets*/
+				padding: 0;
+
+			}
+			a{
+				text-decoration: none; /*removes bullets*/
+				color:white;
+				text-shadow: 5px 2px 4px #91c823;
+				flex:1;		/*equal width to links*/
+				height: 25px;
+				font-family: Poiret One;
+				padding:20px;
+				text-align: center;
+				align-items:stretch;
+				font-size: 40px;
+				border-bottom:1px solid white;
+				background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, 
+				rgba(255, 255, 255, 0.2) 25%, 
+				rgba(255, 255, 255, 0.2) 75%, 
+				rgba(255, 255, 255, 0) 100%);
+			}
+			.active{
+				color: black;
+				text-shadow: 5px 2px 4px #91c823;
+			}
+			#logoNav{
+				font-size: 40px;
+				font-weight: bold;
+				}
+			.box{
+				width: 90%;
+				margin: 0;
+				padding: 15%;
+				border: 10px;	
+				height: 50px;
+			}
+			legend{
+				border-top: 10px;
+				margin-top: 20%;
+			}
+
+
+		/* ------------------Desktop------------------------*/
+		@media screen and (min-width: 700px){
+								/* Navigation */
+			nav{
+				width: 90%;
+				flex-flow: row;/* across screen for dexktop screen size*/
+				align-items:baseline;
+			}
+			a{
+				font-size: 25px;
+				border:none;
+			}
+				.active{
+				color: black;
+				text-shadow: 5px 2px 4px #91c823;
+			}
+			#logoNav{
+				flex:6;
+				text-align: left;
+			}
+
+   		}
+        						
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+		    <a id="logoNav" href="Home.html">Sims4Pal</a>
+		    <a href="Home.html">Home</a>
+		    <a href="Cheat-Codes.html">Cheat Codes</a>
+		    <a href="CCandmods.html">CC and Mods</a>
+		    <a href="Tipsandtricks.html">Tips and Tricks</a>
+		    <a class="active" href="Contact.html">Contact Us</a>
+		</nav> 
+	</header>
+	<aside><div class="container">
+    <div class="row">
+       <div class="col-sm-4">
+             ...
+       </div>
+       <div class="col-sm-4">
+             ...
+       </div>
+       <div class="col-sm-4">
+             ...
+       </div>
+    </div>
+    <div class="row">
+         ...
+    </div>
+</div>
+</aside>
+
+    <section>
+    	<article>
+			<fieldset class="box">
+    			<legend>Join Our Mailing List</legend>
+		   		<input type="text" name="fname" placeholder="Name"/><br/>
+				<input id="email" name="email"  type="email" autofocus placeholder="Email Address"/><br/>
+				<input type="submit" value="Submit"/>
+			</fieldset>
+		</article>
+	</section>
+
+
+	<script src="http://code.jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
